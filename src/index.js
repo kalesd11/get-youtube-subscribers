@@ -8,7 +8,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 // Connect to DATABASE
-const DATABASE_URL = "mongodb://127.0.0.1/subscribers";
+const DATABASE_URL = "mongodb://0.0.0.0/subscribers";
 const mongoServer = async () => {
   try {
     await mongoose.connect(DATABASE_URL, {

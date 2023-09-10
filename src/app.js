@@ -1,6 +1,8 @@
 const express = require("express");
+const cors = require('cors')
 
 const app = express();
+app.use(cors())
 const subscribers = require("./models/subscribers");
 
 // Your code goes here
@@ -32,7 +34,7 @@ app.get("/subscribers/:id", async (req, res) => {
     }
     res.send(data);
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    res.status(400).json({ message: "Sorry! Something Went Wrong !!!"});
   }
 });
 
